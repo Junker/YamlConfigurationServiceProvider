@@ -13,12 +13,16 @@ The best way to install YamlConfigurationServiceProvider is to use a [Composer](
 
     php composer.phar require junker/yaml-configuration-service-provider
 
+##Supports
+- Recursive config imports ([Configuration Organization](http://symfony.com/doc/current/cookbook/configuration/configuration_organization.html))
+- Config Cache (Performance boost)
+
 ##Examples
 
 ```php
 use Junker\Silex\Provider\YamlConfigurationServiceProvider;
 
-$app->register(new YamlConfigurationServiceProvider('config.yml');
+$app->register(new YamlConfigurationServiceProvider('config.yml'));
 
 #or
 
