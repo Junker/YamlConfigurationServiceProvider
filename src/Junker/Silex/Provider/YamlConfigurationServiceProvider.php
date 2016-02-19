@@ -19,13 +19,20 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
 
     public function __construct($configFilePath, $options = null)
     {
+        $this->debug = $app['debug'];
+
         if (is_array($options)) {
+
             if (isset($options['cache_dir'])) {
                 $this->cacheDirPath = $options['cache_dir'];
             }
 
-            $this->debug = isset($options['debug']) ? $options['debug'] : $app['debug'];
+            if (isset($options['debug'])) {
+                $this->debug = $options['debug'];
+            }
+
         }
+
 
         $this->configFilePath = $configFilePath;
     }
