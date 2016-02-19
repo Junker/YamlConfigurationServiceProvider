@@ -13,26 +13,15 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
 {
     protected $cacheDirPath;
     protected $configFilePath;
-    protected $debug;
-
     protected $configCacheFactory;
 
     public function __construct($configFilePath, $options = null)
     {
-        $this->debug = $app['debug'];
-
         if (is_array($options)) {
-
             if (isset($options['cache_dir'])) {
                 $this->cacheDirPath = $options['cache_dir'];
             }
-
-            if (isset($options['debug'])) {
-                $this->debug = $options['debug'];
-            }
-
         }
-
 
         $this->configFilePath = $configFilePath;
     }
@@ -41,7 +30,7 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
     {
         $app['config'] = $app->share(function () {
             if ($this->cacheDirPath) {
-                $cache = $this->getConfigCacheFactory($this->debug)->cache($this->cacheDirPath.'/config.cache.php',
+                $cache = $this->getConfigCacheFactory($app['debug'])->cache($this->cacheDirPath.'/config.cache.php',
                     function (ConfigCacheInterface $cache) {
                         $config = $this->loadConfig();
 
