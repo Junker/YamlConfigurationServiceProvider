@@ -1,11 +1,11 @@
-#YamlConfigurationServiceProvider
+# YamlConfigurationServiceProvider
 YAML Configuration Service Provider for Silex
 
 [![Latest Stable Version](https://poser.pugx.org/junker/yaml-configuration-service-provider/v/stable)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 [![Total Downloads](https://poser.pugx.org/junker/yaml-configuration-service-provider/downloads)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 [![License](https://poser.pugx.org/junker/yaml-configuration-service-provider/license)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 
-##Requirements
+## Requirements
 silex 1.x
 
 ##Installation
@@ -13,27 +13,27 @@ The best way to install YamlConfigurationServiceProvider is to use a [Composer](
 
     php composer.phar require junker/yaml-configuration-service-provider
 
-##Supports
+## Supports
 - Recursive config imports ([Configuration Organization](http://symfony.com/doc/current/cookbook/configuration/configuration_organization.html))
 - Config Cache (Performance boost)
 
-##Examples
+## Examples
 
 ```php
 use Junker\Silex\Provider\YamlConfigurationServiceProvider;
 
 $app->register(new YamlConfigurationServiceProvider('config.yml'));
 
-#or
+# or
 
-$app->register(new YamlConfigurationServiceProvider('config.yml', ['cache_dir' => '/tmp/config_cache', 'debug' => $app['debug']]));
+$app->register(new YamlConfigurationServiceProvider('config.yml', ['cache_dir' => '/tmp/config_cache']]));
 
 $db_host = $app['config']['db']['host'];
 
 ```
 
 
-config.yml 
+Config example: 
 ```yaml
 imports:
      - { resource: 'site/config.yml' }
