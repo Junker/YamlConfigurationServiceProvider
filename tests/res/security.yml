@@ -1,0 +1,10 @@
+security:
+    rules:
+        IS_AUTHENTICATED_ANONYMOUSLY:
+            - '^/registration$'
+            - '^/registration/captcha'
+        ROLE_CONFIRMED:
+            - '^/mail/'
+            - '^/files/'
+        ROLE_USER:
+            - '^/'

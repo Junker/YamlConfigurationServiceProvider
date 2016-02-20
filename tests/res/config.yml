@@ -1,0 +1,13 @@
+imports:
+     - { resource: 'site/config.yml' }
+     - { resource: 'security.yml' }
+
+db:
+    host: localhost
+    login: root
+    pass: 123123
+    database: site12
+
+facebook:
+    scope: 'public_profile,email,user_birthday,user_location,user_photos'
+    secret_key: FDSLKFDNSLsdre23lkndas
