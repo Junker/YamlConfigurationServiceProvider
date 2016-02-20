@@ -3,7 +3,7 @@ YAML Configuration Service Provider for Silex
 
 [![Latest Stable Version](https://poser.pugx.org/junker/yaml-configuration-service-provider/v/stable)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 [![Total Downloads](https://poser.pugx.org/junker/yaml-configuration-service-provider/downloads)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
-[![Build Status](https://scrutinizer-ci.com/g/Junker/YamlConfigurationServiceProvider/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Junker/YamlConfigurationServiceProvider/build-status/master)
+[![Build Status](https://travis-ci.org/Junker/YamlConfigurationServiceProvider.svg?branch=master)](https://travis-ci.org/Junker/YamlConfigurationServiceProvider)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Junker/YamlConfigurationServiceProvider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Junker/YamlConfigurationServiceProvider/?branch=master)
 [![License](https://poser.pugx.org/junker/yaml-configuration-service-provider/license)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 
