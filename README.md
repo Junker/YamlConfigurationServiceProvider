@@ -28,7 +28,7 @@ $app->register(new YamlConfigurationServiceProvider('config.yml'));
 
 # or
 
-$app->register(new YamlConfigurationServiceProvider('config.yml', ['cache_dir' => '/tmp/config_cache']]));
+$app->register(new YamlConfigurationServiceProvider('config.yml', ['cache_dir' => '/tmp/config_cache']));
 
 $db_host = $app['config']['db']['host'];
 

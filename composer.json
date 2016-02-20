@@ -1,19 +1,19 @@
 {
-	"name": "junker/yaml-configuration-service-provider",
-	"description": "YAML Configuration Service Provider for Silex",
-	"keywords": ["silex","config"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Dmitry Kosenkov",
-			"email": "dk-junker@ya.ru"
-		}
-	],
-	"require": {
-		"silex/silex": "1.*",
+    "name": "junker/yaml-configuration-service-provider",
+    "description": "YAML Configuration Service Provider for Silex",
+    "keywords": ["silex","config"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Kosenkov",
+            "email": "dk-junker@ya.ru"
+        }
+    ],
+    "require": {
+        "silex/silex": "1.*",
         "symfony/yaml": "~2.8|~3.0",
         "symfony/config": "~2.8|~3.0"
-	},
+    },
     "autoload": {
         "psr-0" : {
             "Junker" : "src/"

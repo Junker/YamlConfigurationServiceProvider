@@ -28,10 +28,10 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
 
     public function register(Application $app)
     {
-        $app['config'] = $app->share(function (Application $app) {
+        $app['config'] = $app->share(function(Application $app) {
             if ($this->cacheDirPath) {
                 $cache = $this->getConfigCacheFactory($app['debug'])->cache($this->cacheDirPath.'/config.cache.php',
-                    function (ConfigCacheInterface $cache) {
+                    function(ConfigCacheInterface $cache) {
                         $config = $this->loadConfig();
 
                         $content = sprintf('<?php use Junker\Silex\Config; $c = new Config(%s);', var_export($config->data, true)).PHP_EOL;
