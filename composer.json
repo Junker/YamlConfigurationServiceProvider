@@ -1,7 +1,7 @@
 {
     "name": "junker/yaml-configuration-service-provider",
     "description": "YAML Configuration Service Provider for Silex",
-    "keywords": ["silex","config"],
+    "keywords": ["silex","config","configuration","yaml"],
     "license": "MIT",
     "authors": [
         {
