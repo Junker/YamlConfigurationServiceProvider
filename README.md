@@ -10,7 +10,7 @@ YAML Configuration Service Provider for Silex
 ## Requirements
 silex 1.x
 
-##Installation
+## Installation
 The best way to install YamlConfigurationServiceProvider is to use a [Composer](https://getcomposer.org/download):
 
     php composer.phar require junker/yaml-configuration-service-provider
