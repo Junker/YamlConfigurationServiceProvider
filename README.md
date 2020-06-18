@@ -8,7 +8,7 @@ YAML Configuration Service Provider for Silex
 [![License](https://poser.pugx.org/junker/yaml-configuration-service-provider/license)](https://packagist.org/packages/junker/yaml-configuration-service-provider)
 
 ## Requirements
-silex 1.x
+silex 2.x
 
 ## Installation
 The best way to install YamlConfigurationServiceProvider is to use a [Composer](https://getcomposer.org/download):
