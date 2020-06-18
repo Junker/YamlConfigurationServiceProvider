@@ -2,8 +2,8 @@
 
 namespace Junker\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Symfony\Component\Config\ConfigCacheInterface;
 use Symfony\Component\Config\ConfigCacheFactory;
 use Symfony\Component\Config\FileLocator;
@@ -26,9 +26,9 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
         $this->configFilePath = $configFilePath;
     }
 
-    public function register(Application $app)
+    public function register(Container $app)
     {
-        $app['config'] = $app->share(function(Application $app) {
+        $app['config'] = function($app) {
             if ($this->cacheDirPath) {
                 $cache = $this->getConfigCacheFactory($app['debug'])->cache($this->cacheDirPath.'/config.cache.php',
                     function(ConfigCacheInterface $cache) {
@@ -47,11 +47,7 @@ class YamlConfigurationServiceProvider implements ServiceProviderInterface
             }
 
             return $config->data;
-        });
-    }
-
-    public function boot(Application $app)
-    {
+        };
     }
 
     private function getConfigCacheFactory($debug = false)
